@@ -1,14 +1,19 @@
 import entities.Cliente;
-import entities.ContaCorrente;
+import entities.Conta;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        ContaCorrente conta = new ContaCorrente(1,2,new Cliente(),100.0);
-        conta.sacar(107.0);
+        Conta conta = new Conta(1,2,new Cliente(),1000.0);
+        Conta conta2 = new Conta(2,3,new Cliente(),0.0);
+        conta.depositar(1000.0);
+        conta.transferir(conta2,5000.0);
 
-        System.out.print(conta.getSaldo());
+
+
+        System.out.println(conta.getSaldo());
+        System.out.println(conta2.getSaldo());
+
+
 
 //        for (int i = 1; i <= 5; i++) {
 //        }

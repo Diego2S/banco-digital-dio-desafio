@@ -1,4 +1,4 @@
 package entities;
 
-public class ContaPoupanca extends ContaCorrente{
+public class ContaPoupanca extends Conta {
 }

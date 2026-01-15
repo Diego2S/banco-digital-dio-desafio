@@ -1,15 +1,15 @@
 package entities;
 
-public class Conta {
-    private Integer agencia;
-    private Integer numero;
+public abstract class Conta {
+    private String agencia;
+    private Long numero;
     private Cliente cliente;
     private Double saldo;
 
     public Conta() {
     }
 
-    public Conta(Integer agencia, Integer numero, Cliente cliente, Double saldo) {
+    public Conta(String agencia, Long numero, Cliente cliente, Double saldo) {
         this.agencia = agencia;
         this.numero = numero;
         this.cliente = cliente;
@@ -23,11 +23,11 @@ public class Conta {
         return cliente;
     }
 
-    public Integer getNumero() {
+    public Long getNumero() {
         return numero;
     }
 
-    public Integer getAgencia() {
+    public String getAgencia() {
         return agencia;
     }
 

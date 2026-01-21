@@ -51,4 +51,14 @@ public abstract class Conta {
             System.out.println(e.getMessage());
         }
     }
+
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "agencia='" + agencia + '\'' +
+                ", numero=" + numero +
+                ", cliente=" + cliente +
+                ", saldo=" + saldo +
+                '}';
+    }
 }

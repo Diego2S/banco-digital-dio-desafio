@@ -8,4 +8,20 @@ public class Cliente {
         this.cpf = cpf;
         this.nome = nome;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "cpf='" + cpf + '\'' +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
 }

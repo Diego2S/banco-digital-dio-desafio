@@ -1,17 +1,16 @@
 package entities;
 
 public abstract class Conta {
-    private String agencia;
-    private Long numero;
+
+    private static Long numero = 1L;
     private Cliente cliente;
     private Double saldo;
 
     public Conta() {
     }
 
-    public Conta(String agencia, Long numero, Cliente cliente, Double saldo) {
-        this.agencia = agencia;
-        this.numero = numero;
+    public Conta(Cliente cliente, Double saldo) {
+        this.numero += 1L;
         this.cliente = cliente;
         this.saldo = saldo;
     }
@@ -26,11 +25,6 @@ public abstract class Conta {
     public Long getNumero() {
         return numero;
     }
-
-    public String getAgencia() {
-        return agencia;
-    }
-
 
     public void sacar(Double valor){
         if (valor>this.saldo){
@@ -55,9 +49,7 @@ public abstract class Conta {
     @Override
     public String toString() {
         return "Conta{" +
-                "agencia='" + agencia + '\'' +
                 ", numero=" + numero +
-                ", cliente=" + cliente +
                 ", saldo=" + saldo +
                 '}';
     }
